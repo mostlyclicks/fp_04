@@ -1,9 +1,2 @@
 <h1>New Athlete</h1>
-<%= simple_form_for @athlete, html: {mulitpart: true} do |f| %>
-  <%#= f.error_messages %>
-  <%= f.input :name %>
-  <%= f.input :about %>
-  <%= f.input :video_embed %>
-  <%= f.file_field :image %>
-  <%= f.button :submit %>
-<% end %>
+<%= render 'form' %>

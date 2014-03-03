@@ -21,10 +21,23 @@ class AthletesController < ApplicationController
     end
   end
 
+  def edit
+    @athlete = Athlete.find(params[:id])
+  end
+
+  def update
+    @athlete = Athlete.find(params[:id])
+    if @athlete.update_attributes(athlete_params)
+      redirect_to :action => 'show', :id => @athlete
+    else
+      render :action => 'edit'
+    end
+  end
+
   private
 
     def athlete_params
-      params.require(:athlete).permit(:name, :about, :video_embed, :image)
+      params.require(:athlete).permit(:name, :about, :video_embed, :image, :grad_date)
     end
 
 end

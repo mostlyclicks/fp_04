@@ -6,10 +6,11 @@
   </div>
   <div class="col-md-7">
     <h1><%= @athlete.name %></h1>
+    <h4>Graduating: <%= @athlete.grad_date.strftime("%B, %Y") %></h4>
     <p class="lead"><%= @athlete.about %></p>
 
     <div class="row" id="gpa">
-      <div class="col-md-12"><h3>High School GPA | 2000</h3></div>
+      <div class="col-md-12 text-center"><h3>High School GPA</h3></div>
       <div class="col-md-3 col-xs-6 text-center">
         <dt>Freshman</dt>
         <dd>3.5</dd>
