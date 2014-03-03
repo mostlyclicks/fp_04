@@ -1,53 +1,52 @@
-<div id="main" class="container-fluid">
+<div  id="main" >
+  <div class="container">
   <div class="row">
       <div class="col-md-5">
-    <%= image_tag @athlete.image_url.to_s, class: 'img-responsive' %>
+    <%= image_tag @athlete.image_url(:thumb).to_s, class: 'img-responsive' %>
   </div>
   <div class="col-md-7">
     <h1><%= @athlete.name %></h1>
     <p class="lead"><%= @athlete.about %></p>
 
-
     <div class="row" id="gpa">
       <div class="col-md-12"><h3>High School GPA | 2000</h3></div>
-      <div class="col-md-3 text-center">
-        <p>3.5</p>
+      <div class="col-md-3 col-xs-6 text-center">
+        <dt>Freshman</dt>
+        <dd>3.5</dd>
       </div>
-      <div class="col-md-3 text-center">3.5</div>
-      <div class="col-md-3 text-center">3.5</div>
-      <div class="col-md-3 text-center">3.5</div>
+      <div class="col-md-3 col-xs-6 text-center">
+        <dt>Sophomore</dt>
+        <dd>3.5</dd>
+      </div>
+      <div class="col-md-3 col-xs-6 text-center">
+        <dt>Junior</dt>
+        <dd>3.5</dd>
+      </div>
+      <div class="col-md-3 col-xs-6 text-center">
+        <dt>Senior</dt>
+        <dd>3.5</dd>
+      </div>
     </div>
   </div>
-
   </div>
-
-</div>
+</div></div>
 
 
 
 
 <div class="container">
   <div class="row" id="athlete">
-    <div class="col-md-3">
+    <div class="col-md-4">
+      <h1>Hello</h1>
       <%#= image_tag @athlete.image_url.to_s, class: 'img-responsive' %>
     </div>
-    <div class="col-md-3">
-      <div class="panel panel-default">
-        <div class="panel-heading"></div>
-        <div class="panel-body"></div>
-      </div>
+    <div class="col-md-4">
+      <h1>Hello</h1>
     </div>
-    <div class="col-md-3">
-      <div class="panel panel-default">
-  <div class="panel-heading">Panel heading without title</div>
-  <div class="panel-body">
-    Panel content
-  </div>
-</div>
+    <div class="col-md-4">
+      <h1>Hello</h1>
     </div>
-    <div class="col-md-3">
-      <h1>GPA</h1>
-    </div>
+
   </div>
   <div class="row" id="video">
     <%= @athlete.video_embed %>
