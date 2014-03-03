@@ -1,5 +1,33 @@
-div {
-  // border:1px solid black;
-  background-color:#efefef;
+@import "variables";
+
+#top {
+  height:50px;
+  padding:15px;
+  background-color:$white;
+
 }
-.row {border-bottom:1px solid black;}
+
+#main {
+  background-color:$blue;
+  min-height:350px;
+  color:$white;
+
+  h1 {
+    color:$white;
+    font-weight:100;
+  }
+  img {
+
+  }
+  p {
+    color:$white * .85;
+  }
+}
+
+#gpa {
+  font-size:36px;
+}
+
+#athlete div {
+  padding:5px;
+}

@@ -24,7 +24,7 @@ class AthletesController < ApplicationController
   private
 
     def athlete_params
-      params.require(:athlete).permit(:name, :about, :video_embed)
+      params.require(:athlete).permit(:name, :about, :video_embed, :image)
     end
 
 end

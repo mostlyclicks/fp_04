@@ -10,6 +10,8 @@ gem 'pg'
 gem 'sass-rails', '~> 4.0.0'
 gem 'bootstrap-sass'
 gem 'simple_form'
+
+gem 'mini_magick'
 gem 'carrierwave'
 
 # Use Uglifier as compressor for JavaScript assets
