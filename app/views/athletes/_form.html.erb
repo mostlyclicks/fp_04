@@ -1,6 +1,7 @@
 <%= simple_form_for @athlete, html: {mulitpart: true} do |f| %>
   <%#= f.error_messages %>
   <%= f.input :name %>
+  <%= f.input :sport %>
   <%= f.input :grad_date, as: :date, 
                               start_year: Date.today.year + 10,
                               end_year: Date.today.year - 4, discard_day: true,
