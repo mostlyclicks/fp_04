@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140303192824) do
+ActiveRecord::Schema.define(version: 20140303195458) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,10 @@ ActiveRecord::Schema.define(version: 20140303192824) do
     t.string   "image"
     t.date     "grad_date"
     t.string   "sport"
+    t.float    "gpa_1"
+    t.float    "gpa_2"
+    t.float    "gpa_3"
+    t.float    "gpa_4"
   end
 
 end

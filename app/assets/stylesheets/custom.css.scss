@@ -12,7 +12,7 @@
   min-height:350px;
   color:$white;
   box-shadow:inset 0px 0px 15px rgba(0,0,0, .5);
-  border-bottom:8px solid lighten($blue, 60%);
+  border-bottom:1px solid rgba(255,255,255,.1);
   border-top:8px solid lighten($blue, 60%);
 
   h1 {
@@ -54,11 +54,59 @@
   }
 }
 
+#lower {
+padding:20px 0 40px 0;
+background: #232628; /* Old browsers */
+background: -moz-linear-gradient(top, #232628 0%, #20242b 22%, #000000 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#232628), color-stop(22%,#20242b), color-stop(100%,#000000)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #232628 0%,#20242b 22%,#000000 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #232628 0%,#20242b 22%,#000000 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #232628 0%,#20242b 22%,#000000 100%); /* IE10+ */
+background: linear-gradient(to bottom, #232628 0%,#20242b 22%,#000000 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#232628', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+}
+
 #athlete {
-  background-color:$white;
-  box-shadow:1px 1px 1px rgba(0,0,0,.1);
-  margin-top:20px;
+  // background-color:$white;
+  // box-shadow:1px 1px 1px rgba(0,0,0,.1);
+  margin-top:0px;
   padding:5px;
   border-radius:5px;
+  min-height:300px;
+  color:$white;
+  font-size:20px;
+  font-weight:200;
+  h3 {
+    font-weight:100;
+    color:lighten($blue, 50%);
+  }
+  table tr td {
+    border-top:1px solid $white * .3;
+  }
+  #records {
+    font-size:14px;
+  }
 
+}
+
+#video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 0px;
+  height: 0;
+  overflow: hidden;
+  iframe, object, embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+
+  }
+}
+
+#footer {
+  height:100px;
+  background-color:rgba(0,0,0,.8);
 }

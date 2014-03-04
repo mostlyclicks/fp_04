@@ -7,6 +7,10 @@
                               end_year: Date.today.year - 4, discard_day: true,
                               order: [:month, :year] %>
   <%= f.input :about %>
+  <%= f.input :gpa_1 %>
+  <%= f.input :gpa_2 %>
+  <%= f.input :gpa_3 %>
+  <%= f.input :gpa_4 %>
   <%= f.input :video_embed %>
   <%= f.file_field :image %>
   <%= f.button :submit %>

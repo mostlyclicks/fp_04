@@ -13,19 +13,19 @@
       <div class="col-md-12 text-center"><h3>High School GPA</h3></div>
       <div class="col-md-3 col-xs-6 text-center">
         <dt>Freshman</dt>
-        <dd>3.5</dd>
+        <dd><%= @athlete.gpa_1 %></dd>
       </div>
       <div class="col-md-3 col-xs-6 text-center">
         <dt>Sophomore</dt>
-        <dd>3.5</dd>
+        <dd><%= @athlete.gpa_2 %></dd>
       </div>
       <div class="col-md-3 col-xs-6 text-center">
         <dt>Junior</dt>
-        <dd>3.5</dd>
+        <dd><%= @athlete.gpa_3 %></dd>
       </div>
       <div class="col-md-3 col-xs-6 text-center">
         <dt>Senior</dt>
-        <dd>3.5</dd>
+        <dd><%= @athlete.gpa_4 %></dd>
       </div>
     </div>
   </div>
@@ -34,24 +34,84 @@
 
 
 
-
+<div id="lower">
 <div class="container">
   <div class="row" id="athlete">
-    <div class="col-md-4">
-      <h1>Hello</h1>
-      <%#= image_tag @athlete.image_url.to_s, class: 'img-responsive' %>
+<!--     <div class="col-md-2">
+      <h3>About</h3>
+      <table class="table">
+      <tr>
+        <td>Age:</td>
+        <td>47</td>
+      </tr>
+      <tr>
+        <td>Weight:</td>
+        <td>155 lbs</td>
+      </tr>
+      <tr>
+        <td>Height:</td>
+        <td>5' 5"</td>
+      </tr>
+      </table>
+    </div> -->
+    <div class="col-md-5" id="times">
+      <h3>Times</h3>
+      <table class="table">
+      <tr>
+        <td>100m Breaststroke</td>
+        <td>55:00</td>
+      </tr>
+      <tr>
+        <td>100m Butterfly</td>
+        <td>52:00</td>
+      </tr>
+      <tr>
+        <td>50m Freestyle</td>
+        <td>21:00</td>
+      </tr>
+      <tr>
+        <td>500m Freestyle</td>
+        <td>4:44:30</td>
+      </tr>
+      </table>
+      
     </div>
-    <div class="col-md-4">
-      <h1>Hello</h1>
-    </div>
-    <div class="col-md-4">
-      <h1>Hello</h1>
+    <div class="col-md-7" id="records">
+      <h3>Records/Awards</h3>
+      <table class="table">
+      <tr>
+        <td>Meet Record</td>
+        <td>Conference Meet - 2/12/13</td>
+        <td>100m Breast</td>
+        <td>55:12</td>
+
+      </tr>
+      <tr>
+        <td>1st place</td>
+        <td>State Meet - 2/20/13</td>
+        <td>100m Breast</td>
+        <td>55:12</td>
+       
+      </tr>
+      <tr>
+        <td>3rd place</td>
+        <td>State Meet - 2/20/13</td>
+        <td>50m Free</td>
+        <td>21:12</td>
+        
+      </tr>
+
+      </table>
     </div>
 
   </div>
   <div class="row" id="video">
-    <%= @athlete.video_embed %>
+    <div class="col-md-12" id="video-container">
+      <%= raw @athlete.video_embed %>
+    </div>
   </div>
 
-
 </div>
+</div>
+
+<div id="footer"></div>
