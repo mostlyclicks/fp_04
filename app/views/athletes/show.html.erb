@@ -55,24 +55,19 @@
       </table>
     </div> -->
     <div class="col-md-5" id="times">
-      <h3>Times</h3>
+      <h3><%= @athlete.stat_title %></h3>
+      <% magic_splitter(@athlete.stat_data) %>
       <table class="table">
-      <tr>
-        <td>100m Breaststroke</td>
-        <td>55:00</td>
-      </tr>
-      <tr>
-        <td>100m Butterfly</td>
-        <td>52:00</td>
-      </tr>
-      <tr>
-        <td>50m Freestyle</td>
-        <td>21:00</td>
-      </tr>
-      <tr>
-        <td>500m Freestyle</td>
-        <td>4:44:30</td>
-      </tr>
+        <% @data_split.each do |d| %>
+          
+            <tr>
+              <% c = comma_splitter(d) %>
+              <% c.each do |t| %>
+                <td><%= t %></td>
+                <% end %>
+            </tr>
+          
+        <% end %>
       </table>
       
     </div>

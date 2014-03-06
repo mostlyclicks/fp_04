@@ -1,3 +1,5 @@
+<div class="row">
+<div class="col-md-6">
 <%= simple_form_for @athlete, html: {mulitpart: true} do |f| %>
   <%#= f.error_messages %>
   <%= f.input :name %>
@@ -6,12 +8,20 @@
                               start_year: Date.today.year + 10,
                               end_year: Date.today.year - 4, discard_day: true,
                               order: [:month, :year] %>
+  
   <%= f.input :about %>
   <%= f.input :gpa_1 %>
   <%= f.input :gpa_2 %>
   <%= f.input :gpa_3 %>
   <%= f.input :gpa_4 %>
+
+
+  <%= f.input :stat_title, label: 'Data you are listing. ex times, wins, score' %>
+  <%= f.input :stat_data %>
+
   <%= f.input :video_embed %>
   <%= f.file_field :image %>
-  <%= f.button :submit %>
+  <%= f.button :submit, class: 'btn btn-primary' %>
 <% end %>
+</div>
+</div>
