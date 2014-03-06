@@ -73,7 +73,24 @@
     </div>
     <div class="col-md-7" id="records">
       <h3>Records/Awards</h3>
+
+      <% magic_splitter(@athlete.accolades_text) %>
       <table class="table">
+        <% @data_split.each do |d| %>
+          
+            <tr>
+              <% c = comma_splitter(d) %>
+              <% c.each do |t| %>
+                <td><%= t %></td>
+                <% end %>
+            </tr>
+          
+        <% end %>
+      </table>
+
+
+
+     <!--  <table class="table">
       <tr>
         <td>Meet Record</td>
         <td>Conference Meet - 2/12/13</td>
@@ -95,7 +112,7 @@
         <td>21:12</td>
       </tr>
 
-      </table>
+      </table> -->
     </div>
 
   </div>
