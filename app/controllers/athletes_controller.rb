@@ -30,7 +30,7 @@ class AthletesController < ApplicationController
     if @athlete.update_attributes(athlete_params)
       redirect_to :action => 'show', :id => @athlete
     else
-      render :action => 'edit'
+      render 'edit'
     end
   end
 
