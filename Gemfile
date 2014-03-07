@@ -12,11 +12,13 @@ gem 'bootstrap-sass'
 gem 'simple_form'
 gem 'rails_12factor', group: :production
 gem 'unicorn'
+
 #gem 'thin'
 gem 'auto_html'
 
 gem 'mini_magick'
 gem 'carrierwave'
+gem 'fog'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
