@@ -10,6 +10,7 @@ gem 'pg'
 gem 'sass-rails', '~> 4.0.0'
 gem 'bootstrap-sass'
 gem 'simple_form'
+gem 'rails_12factor', group: :production
 
 gem 'mini_magick'
 gem 'carrierwave'

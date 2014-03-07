@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140306042757) do
+ActiveRecord::Schema.define(version: 20140307030640) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,6 +32,9 @@ ActiveRecord::Schema.define(version: 20140306042757) do
     t.string   "stat_title"
     t.text     "stat_data"
     t.text     "accolades_text"
+    t.date     "birthdate"
+    t.float    "weight"
+    t.string   "height"
   end
 
 end

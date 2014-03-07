@@ -1,29 +1,65 @@
 <div class="row">
-<div class="col-md-6">
-<%= simple_form_for @athlete, html: {mulitpart: true} do |f| %>
+<div class="col-md-12">
+<%= simple_form_for @athlete, html: {mulitpart: true, class: 'form-horizontal'} do |f| %>
   <%#= f.error_messages %>
-  <%= f.input :name %>
-  <%= f.input :sport %>
-  <%= f.input :grad_date, as: :date, 
-                              start_year: Date.today.year + 10,
-                              end_year: Date.today.year - 4, discard_day: true,
-                              order: [:month, :year] %>
-  
-  <%= f.input :about %>
-  <%= f.input :gpa_1 %>
-  <%= f.input :gpa_2 %>
-  <%= f.input :gpa_3 %>
-  <%= f.input :gpa_4 %>
 
+  <!-- Nav tabs -->
+<ul class="nav nav-tabs">
+  <li class="active"><a href="#intro" data-toggle="tab">Intro</a></li>
+  <li><a href="#genInfo" data-toggle="tab">General Info</a></li>
+  <li><a href="#gpa" data-toggle="tab">GPA</a></li>
+  <li><a href="#stats" data-toggle="tab">Stats, Times, Results</a></li>
+  <li><a href="#awards" data-toggle="tab">Awards/Accomplishments</a></li>
+  <li><a href="#pic-vid" data-toggle="tab">Picture/Video</a></li>
+</ul>
 
-  <%= f.input :stat_title, label: 'Data you are listing. ex times, wins, score' %>
-  <%= f.input :stat_data %>
+<!-- Tab panes -->
+<div class="tab-content">
+  <div class="tab-pane active" id="intro">
+    <%= f.input :name %>
+    <%= f.input :sport %>
+    <%= f.input :grad_date, as: :date, 
+                                start_year: Date.today.year + 10,
+                                end_year: Date.today.year - 4, discard_day: true,
+                                order: [:month, :year],
+                                html: {class: 'col-md-2'} %>
+    <%= f.input :about %>
+  </div>
 
-  <%= f.input :accolades_text, label: 'List your accomplishments here' %>
+  <div class="tab-pane" id="genInfo">
+    <%= f.input :birthdate, as: :date,
+                                start_year: Date.today.year - 20,
+                                end_year: Date.today.year - 5,
+                                discard_day: false,
+                                order: [:month, :day, :year] %>
+    <%= f.input :weight %>
+    <%= f.input :height %>  
+  </div>
 
-  <%= f.input :video_embed %>
-  <%= f.file_field :image %>
+  <div class="tab-pane" id="gpa">
+    <%= f.input :gpa_1 %>
+    <%= f.input :gpa_2 %>
+    <%= f.input :gpa_3 %>
+    <%= f.input :gpa_4 %>
+  </div>
+  <div class="tab-pane" id="stats">
+    <%= f.input :stat_title, label: 'Data you are listing. ex times, wins, score' %>
+    <%= f.input :stat_data, input_html: {rows: 10} %>
+  </div>
+
+  <div class="tab-pane" id="awards">
+    <%= f.input :accolades_text, label: 'List your accomplishments here', input_html: {rows: 10} %>
+  </div>
+
+  <div class="tab-pane" id="pic-vid">
+    <%= f.file_field :image, label: 'Your profile picture' %>
+    <%= f.input :video_embed, input_html: {rows: 6} %>
+
+  </div>
+</div>
+
   <%= f.button :submit, class: 'btn btn-primary' %>
 <% end %>
 </div>
 </div>
+
